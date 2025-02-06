@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI, Query, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -80,5 +81,3 @@ async def classify_number(number: str = Query(..., description="Number to classi
         "digit_sum": sum(int(d) for d in str(abs(num))),
         "fun_fact": fun_fact
     }
-
-
